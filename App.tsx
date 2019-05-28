@@ -6,6 +6,7 @@ import {
 
 import Reanimated, { Easing } from 'react-native-reanimated';
 import LinearGradient from 'react-native-linear-gradient';
+import codePush from "react-native-code-push";
 
 
 interface Props {
@@ -27,8 +28,7 @@ const {
 } = Reanimated;
 
 const AnimatedCircle = Reanimated.createAnimatedComponent(Circle);
-
-export default class App extends Component<Props> {
+ class App extends Component<Props> {
 
 
 
@@ -114,7 +114,7 @@ export default class App extends Component<Props> {
             cx="50%"
             cy="50%"
             r="20%"
-            stroke='red'
+            stroke='green'
             strokeWidth="60"
             fill="#000000"
             strokeDashoffset={offset}
@@ -147,3 +147,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
 });
+
+
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
+
+
+export default codePush(codePushOptions)(App);
