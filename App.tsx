@@ -114,7 +114,7 @@ export default class App extends Component<Props> {
             cx="50%"
             cy="50%"
             r="20%"
-            stroke='green'
+            stroke='red'
             strokeWidth="60"
             fill="#000000"
             strokeDashoffset={offset}
